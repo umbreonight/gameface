@@ -1,0 +1,22 @@
+.section-title {
+  font-size: 21px;
+  font-family: $font-family-secondary;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  letter-spacing: .02em;
+  margin-bottom: 1rem;
+  min-height: 40px;
+
+  &:not(:first-child) {
+    margin-top: 2rem;
+  }
+
+  .see-all {
+    @extend .button-flat;
+    margin: 0;
+    padding: 0;
+  }
+}

@@ -1,0 +1,29 @@
+$black: #252525;
+$white: #fff;
+$grey: #eaeaea;
+
+$primary-color: $primary;
+$primary-color-dark: darken($primary-color, 10%);
+$primary-color-tint-1: lighten($primary-color, 10%);
+$primary-color-tint-2: lighten($primary-color, 20%);
+$primary-color-tint-3: lighten($primary-color, 30%);
+$primary-color-tint-4: lighten($primary-color, 40%);
+$primary-color-tint-5: lighten($primary-color, 50%);
+$primary-font: $font-family-base;
+
+$link-color: $white;
+
+$nav-width: calc(100% - 4rem);
+$nav-padding: 1rem 1.5rem;
+$nav-border-color: $primary-color-tint-5;
+$nav-background-color: $bg-color;
+$nav-icon-font: "Material Icons";
+$nav-icon-arrow-right: "chevron_right";
+$nav-icon-arrow-left: "chevron_left";
+
+$nav-level-border-color: $primary-color;
+$nav-level-background-color: $bg-color;
+
+$nav-level3-background-color: $bg-color;
+$nav-level4-background-color: $bg-color;
+$nav-level5-background-color: $bg-color;

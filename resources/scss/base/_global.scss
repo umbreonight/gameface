@@ -1,0 +1,131 @@
+html,
+body {
+  margin: 0;
+  // font-weight: $font-weight-default !important;
+  font-family: $font-family-primary;
+  height: 100%;
+}
+
+//Default styles
+html {
+  @include scrollbars(5px, $primary);
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  background-color: $bg-color;
+  // background-image: url("/static/images/background/what-the-hex-dark.png");
+  color: $text-color;
+  font-size: 100%;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+ul {
+  &:not(.browser-default) {
+    padding-left: 0;
+    list-style-type: none;
+
+    & > li {
+      list-style-type: none;
+      margin: 5px 0;
+    }
+  }
+}
+
+hr {
+  margin: 15px 0 20px 0;
+  border-color: $gray-200;
+
+  &.theme-gradient {
+    border: none;
+    height: 1px;
+
+    background: rgb(0, 183, 239);
+    background: -moz-linear-gradient(
+      173deg,
+      rgba(0, 183, 239, 1) 0%,
+      rgba(61, 56, 51, 1) 50%,
+      rgba(245, 128, 38, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+      173deg,
+      rgba(0, 183, 239, 1) 0%,
+      rgba(61, 56, 51, 1) 50%,
+      rgba(245, 128, 38, 1) 100%
+    );
+    background: linear-gradient(
+      173deg,
+      rgba(0, 183, 239, 1) 0%,
+      rgba(61, 56, 51, 1) 50%,
+      rgba(245, 128, 38, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00b7ef",endColorstr="#f58026",GradientType=1);
+
+    &.radial {
+      background: rgb(0, 183, 239);
+      background: -moz-radial-gradient(
+        circle,
+        rgba(0, 183, 239, 1) 0%,
+        rgba(61, 56, 51, 1) 50%,
+        rgba(245, 128, 38, 1) 100%
+      );
+      background: -webkit-radial-gradient(
+        circle,
+        rgba(0, 183, 239, 1) 0%,
+        rgba(61, 56, 51, 1) 50%,
+        rgba(245, 128, 38, 1) 100%
+      );
+      background: radial-gradient(
+        circle,
+        rgba(0, 183, 239, 1) 0%,
+        rgba(61, 56, 51, 1) 50%,
+        rgba(245, 128, 38, 1) 100%
+      );
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00b7ef",endColorstr="#f58026",GradientType=1);
+    }
+  }
+}
+
+details {
+  summary {
+    user-select: none;
+    outline: none;
+    padding: 1rem;
+    background-color: $onyx;
+  }
+}
+
+header + main {
+  padding: 60px 0;
+
+  @include lg() {
+    padding: 100px 0;
+  }
+}
+
+.height-container {
+  height: 2000px;
+}
+
+.page-loader {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 100px;
+    margin-bottom: 2rem;
+  }
+}

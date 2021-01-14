@@ -1,0 +1,9 @@
+$card-padding: 24px !default;
+$card-border-radius: $global-border-radius;
+$card-title-font-family: $font-family-heading;
+$card-title-color: inherit;
+$card-title-font-size: 2rem;
+$card-title-font-size-small: 1.25rem;
+$card-bg-color: $secondary-darken !default;
+$card-link-color: $accent !default;
+$card-link-color-light: lighten($card-link-color, 20%) !default;

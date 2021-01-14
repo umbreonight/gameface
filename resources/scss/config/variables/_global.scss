@@ -1,0 +1,22 @@
+/*
+Component class prefixing
+Prefix must have a trailing '-'
+*/
+
+//? $prefix: 'gf-';
+
+$prefix: "gf-";
+
+/*
+Available themes:
+
+default
+default-dark
+splash
+brand
+*/
+
+$theme: default;
+
+$global-border-radius: 10px;
+$global-border-radius-small: 4px;

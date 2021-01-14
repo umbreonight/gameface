@@ -1,0 +1,192 @@
+.card {
+  @include box-shadow(2);
+  background-color: $card-bg-color;
+  border-radius: $card-border-radius;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow 0.25s;
+
+  .card-actions {
+    display: flex;
+  }
+
+  .card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    img {
+      display: block;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      width: 100%;
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+
+  .card-title {
+    color: #fff;
+    font-family: $font-family-heading;
+    margin: 0;
+    font-weight: 700;
+    font-size: $card-title-font-size-small;
+    line-height: 36px;
+    @include line-clamp(2);
+
+    @include sm() {
+      font-size: $card-title-font-size;
+    }
+  }
+
+  .card-content {
+    z-index: 2;
+    padding: 20% 20px 20px 20px;
+    color: whitesmoke;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0,
+        rgba(0, 0, 0, 0.8) 100%,
+        rgba(0, 0, 0, 0.9) 100%
+      );
+  }
+
+  .card-actions {
+    display: flex;
+    padding: 0 1rem 1rem 1rem;
+    background-color: $card-bg-color;
+
+    .card-action {
+      color: whitesmoke;
+      display: flex;
+      align-items: center;
+
+      .icon {
+        width: 18px;
+        line-height: 23px;
+        margin-right: 1rem;
+        color: $accent;
+      }
+
+      .label {
+        font-size: 0.813rem;
+        line-height: 0.813rem;
+      }
+
+      &:hover {
+        .label {
+          color: $accent;
+        }
+      }
+
+      &:not(:first-child) {
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
+
+  &.small {
+    height: 150px;
+
+    .card-title {
+      font-size: 1.125rem;
+      line-height: 1.125rem;
+    }
+
+    .card-content {
+      padding: 0.75rem;
+      background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0,
+        rgba(0, 0, 0, 0.8) 100%,
+        rgba(0, 0, 0, 0.9) 100%
+      );
+    }
+  }
+
+  &.review {
+    height: 200px;
+
+    @include md() {
+      height: 300px;
+    }
+    
+    .rating {
+      // @extend .badge;
+      border-radius: $global-border-radius;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      padding: 0 .5rem;
+      text-transform: uppercase;
+      font-size: 0.875rem;
+      display: flex;
+      line-height: 23px;
+      background-color: $accent-3;
+      font-family: $font-family-primary;
+      align-items: center;
+
+      .icon {
+        margin-right: .25rem;
+      }
+    }
+
+    .card-title {
+      font-size: 1.313em;
+      line-height: 1.313em;
+    }
+
+    .card-content {
+      padding: 0.75rem;
+      background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0,
+        rgba(0, 0, 0, 0.8) 100%,
+        rgba(0, 0, 0, 0.9) 100%
+      );
+    }
+  }
+
+  &.news {
+    flex-direction: column;
+    height: auto;
+
+    .card-title {
+      font-size: 1.313rem;
+    }
+
+    .card-image {
+      position: relative;
+      max-height: 200px;
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .card-content {
+      flex: 1;
+      padding: 1rem;
+      // justify-content: center;
+      display: flex;
+      flex-direction: column;
+      background-image: none;
+
+      p {
+        font-size: 1rem;
+        @include line-clamp(3);
+      }
+    }
+  }
+}

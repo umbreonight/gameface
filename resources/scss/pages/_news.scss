@@ -1,0 +1,131 @@
+.page-news {
+  display: grid;
+  gap: 2rem;
+  grid-template-areas: "header-carousel header-carousel" "main main";
+  grid-template-rows: 300px 1fr;
+  grid-template-columns: 1fr 1fr;
+  @include grid-container();
+  @include grid-container-max-widths();
+
+  main {
+    grid-area: main;
+
+    display: grid;
+    grid-gap: 2rem;
+    padding: 0 0 3rem;
+  }
+
+  aside {
+    display: none;
+  }
+
+  @include md() {
+    padding-top: 4rem;
+  }
+
+  @include lg() {
+    grid-template-areas: "header-carousel header-carousel" "main aside";
+    grid-template-rows: 360px 1fr;
+    grid-template-columns: 1fr 300px;
+    @include grid-container();
+
+    aside {
+      display: grid;
+      grid-area: aside;
+      grid-gap: 1rem;
+      grid-auto-rows: min-content;
+    }
+  }
+}
+
+section[name="news-featured"] {
+  .news-featured {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+
+    @include md() {
+      grid-template-columns: 1fr 1fr;
+
+      & > a:first-child {
+        grid-column: span 2;
+      }
+    }
+  }
+}
+
+section[name="news-latest"] {
+  .news-latest {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+
+    @include md() {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+section[name="news-entertainment"] {
+  .news-entertainment {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+
+    .card {
+      height: 200px;
+
+      .card-title {
+        font-size: 0.813rem;
+        line-height: 0.938rem;
+      }
+    }
+
+    @include md() {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+}
+
+section[name="news-reviews"] {
+  .news-reviews {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+
+    @include md() {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}
+
+section[name="news-mobile"] {
+  @include md() {
+    .media {
+      grid-template-columns: 150px 1fr;
+      grid-template-rows: 150px 1fr;
+    }
+  }
+}
+section[name="news-tech"] {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  .news-tech {
+    grid-column: span 2;
+  }
+
+  .slick-dots {
+    bottom: -40px;
+  }
+
+  .card {
+    margin-right: 1rem;
+  }
+
+  @include md() {
+    .news-tech {
+      grid-column: span 2;
+    }
+  }
+}

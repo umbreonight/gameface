@@ -1,0 +1,63 @@
+
+[name="documentation"] {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-areas: "aside main";
+  padding: 2rem 1rem;
+
+  main {
+    grid-area: main;
+
+    /** enlarge the sections for this demo, so that we have a long scrollable page **/
+    section {
+      padding-top: .5rem;
+      padding-bottom: 20rem;
+    }
+  }
+
+  aside {
+    grid-area: aside;
+    position: sticky;
+    top: 2rem;
+    align-self: start;
+
+    nav {
+
+      ul,
+      ol {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        margin-left: 1rem;
+
+        &>a {
+          text-decoration: none;
+          display: block;
+          padding: .125rem 0;
+          color: #ccc;
+          transition: all 50ms ease-in-out;
+          /* 💡 This small transition makes setting of the active state smooth */
+
+          &:hover,
+          &:focus {
+            color: #666;
+          }
+        }
+
+        &.active {
+          &>a {
+            color: $primary;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}
+
+.gameface365 {
+  padding: 2rem 1rem;
+}

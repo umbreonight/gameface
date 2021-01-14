@@ -1,0 +1,13 @@
+section[name="subscribe"] {
+
+}
+
+.category-quick-links {
+  @extend .navigation;
+
+  a {
+    @extend .navigation-link;
+    text-align: left;
+    padding: .5rem 0;
+  }
+}

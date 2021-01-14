@@ -1,0 +1,13 @@
+:root {
+    --main-bg-color: $bg-color;
+    --card-bg-color: lighten(--main-bg-color, 10);
+    --main-text-color: $text-color;
+}
+
+body.dark {
+    background-color: var(--main-bg-color) !important;
+
+    .card {
+        background-color: var(--card-bg-color) !important;
+    }
+}

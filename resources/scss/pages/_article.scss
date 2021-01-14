@@ -1,0 +1,230 @@
+.article {
+  display: grid;
+  row-gap: 2rem;
+
+  @include md() {
+    @include grid-container();
+    @include grid-container-max-widths();
+  }
+
+  .article-header {
+    display: flex;
+    flex-direction: column;
+    .article-image {
+      position: relative;
+      max-height: 300px;
+      height: 300px;
+      overflow: hidden;
+
+      img {
+        display: block;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        width: 100%;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+
+    .article-meta {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: 65px max-content max-content;
+      grid-template-areas:
+        "avatar author date"
+        "avatar engagements engagements";
+      // "share share share";
+
+      padding: 1rem 2rem;
+      background-color: #121212;
+
+      @include sm() {
+        grid-template-columns: 65px max-content max-content;
+        grid-template-areas: "avatar author date engagements share";
+        align-items: center;
+        gap: 2rem;
+      }
+
+      .author-avatar {
+        @extend .media-asset;
+        border-radius: 100%;
+        grid-area: avatar;
+        height: 65px;
+        width: 65px;
+      }
+
+      .author-name {
+        @extend .article-meta-item;
+        grid-area: author;
+      }
+
+      .article-date {
+        @extend .article-meta-item;
+        grid-area: date;
+      }
+
+      .article-engagements {
+        display: grid;
+        grid-template-columns: max-content max-content;
+        grid-area: engagements;
+        gap: 1rem;
+
+        .article-action {
+          color: whitesmoke;
+          display: flex;
+          align-items: center;
+
+          .icon {
+            width: 18px;
+            line-height: 23px;
+            margin-right: 1rem;
+            color: $accent;
+          }
+
+          .label {
+            font-size: 0.813rem;
+            line-height: 0.813rem;
+          }
+
+          &:hover {
+            .label {
+              color: $accent;
+            }
+          }
+        }
+      }
+
+      .article-share {
+        grid-area: share;
+        display: grid;
+        grid-template-columns: 65px repeat(auto-fill, minmax(24px, 36px));
+        gap: 1rem;
+        align-items: center;
+      }
+
+      .article-meta-item {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .article-meta-tags {
+        grid-column: span 3;
+      }
+    }
+  }
+
+  .article-content {
+    padding: 0 2rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+
+    p {
+      max-width: initial;
+    }
+
+    @include sm() {
+      grid-template-columns: 1fr 224px;
+    }
+
+    @include md() {
+      grid-template-columns: 1fr 300px;
+      padding: 0;
+      column-gap: 2rem;
+    }
+  }
+
+  .article-title {
+    margin-top: 0;
+  }
+}
+
+.article-meta-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.article-meta-label {
+  font-family: $font-family-base;
+  font-size: 12px;
+  font-weight: lighter;
+  color: #bdbdbd;
+}
+
+.article-meta-title {
+  font-family: $font-family-heading;
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: bolder;
+}
+
+.article-comments {
+  display: grid;
+  gap: 1rem;
+}
+
+.article-comment {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 35px 1fr 28px;
+  grid-template-rows: 35px 1fr 35px;
+  grid-template-areas:
+    "author-avatar article-comment-meta comment-options"
+    "... comment-body ..."
+    "... comment-actions ...";
+}
+
+.author-avatar {
+  grid-area: author-avatar;
+  height: 35px;
+  width: 35px;
+  border-radius: 100%;
+}
+
+.article-comment-meta {
+  grid-area: article-comment-meta;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: $text-color;
+
+  .author-name {
+    font-size: 13px;
+    line-height: 16px;
+    font-family: $font-family-heading;
+  }
+
+  .published {
+    font-size: 12px;
+    line-height: 16px;
+    font-family: $font-family-base;
+    color: $gray-400;
+  }
+}
+.comment-options {
+  grid-area: comment-options;
+  color: $gray-300;
+}
+
+.comment-body {
+  p {
+    margin: 0;
+  }
+  grid-area: comment-body;
+  font-size: 14px;
+}
+
+.comment-actions {
+  grid-area: comment-actions;
+  align-items: center;
+
+  .button-flat {
+    margin: 0;
+    padding: 0;
+
+    &:not(:first-child) {
+      margin-left: 1rem;
+    }
+  }
+}

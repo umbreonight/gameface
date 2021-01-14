@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>GameFace365 UI</title>
+  {{ style('/dist/main') }}
+</head>
+<body>
+  <div name="documentation">
+    <main>
+      <h1>Project Title <small>Documentation</small></h1>
+        <section id="introduction">
+          <h2>Introduction</h2>
+          <p>…</p>
+        </section>
+        <section id="brand">
+          <h2>Brand</h2>
+          <p>…</p>
+        </section>
+        <%= require('html-loader!./templates/documentation/colors.html') %>
+        <%= require('html-loader!./templates/documentation/typography.html') %>
+
+        <section id="components">
+          <h2>Components</h2>
+          <section id="components--badges">
+            <h3>Root</h3>
+            <p>…</p>
+          </section>
+          <section id="components--buttons">
+            <h3>Buttons</h3>
+            <p>…</p>
+          </section>
+          <section id="components--checkboxes">
+            <h3>Checkboxes</h3>
+            <p>…</p>
+          </section>
+        </section>
+    </main>
+    <aside>
+      <nav>
+        <ol>
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#brand">Brand</a></li>
+          <li><a href="#colors">Colors</a></li>
+          <li class=""><a href="#typography">Typography</a></li>
+          <li><a href="#components">Components</a>
+            <ul>
+              <li class=""><a href="#components--badges">Badges</a></li>
+              <li class=""><a href="#components--buttons">Buttons</a></li>
+              <li class=""><a href="#components--checkboxes">Checkboxes</a></li>
+            </ul>
+          </li>
+        </ol>
+      </nav>
+    </aside>
+  </div>
+    {{ script('/dist/main') }}
+    {{ script('/dist/table-of-contents') }}
+</body>
+</html>

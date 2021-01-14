@@ -1,0 +1,183 @@
+/* Modular Scale located here: https://www.modularscale.com/?1,1140,12&em&1.3 */
+
+body {
+  font-family: $font-family-base;
+  font-size: calc(12px + 0.35vw);
+  /* Responsive base font size */
+  line-height: calc(12px + 1.05vw);
+  /* Responsive Vertical Rhythm */
+}
+
+h1 {
+  font-size: 1.912em;
+  line-height: calc(18px + 1.8vw);
+  /* Responsive Vertical Rhythm */
+}
+
+h2 {
+  font-size: 1.616em;
+  line-height: calc(18px + 1vw);
+  /* Responsive Vertical Rhythm */
+}
+
+h3 {
+  font-size: 1.471em;
+  line-height: calc(18px + 0.7vw);
+  /* Responsive Vertical Rhythm */
+}
+
+h4 {
+  font-size: 1.3em;
+}
+
+h5 {
+  font-size: 1.243em;
+}
+
+h6 {
+  font-size: 1.132em;
+}
+
+h4,
+h5,
+h6 {
+  line-height: calc(18px + 0.2vw);
+  /* Responsive Vertical Rhythm */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: calc(12px + 1.05vw) 0;
+  /* Responsive margins */
+  font-family: $font-family-heading;
+  letter-spacing: 0.02em;
+
+  small,
+  .small {
+    font-weight: normal;
+    line-height: 1;
+    margin-left: 10px;
+  }
+}
+
+p {
+  color: $text-color;
+  font-family: $font-family-base;
+  font-size: 1rem;
+  line-height: $line-height-base;
+  max-width: 33em;
+  margin: 1em 0;
+  user-select: none;
+  overflow: hidden;
+  letter-spacing: 0.02em;
+
+  &.feature {
+    font-size: 1.125rem;
+  }
+
+  .text-white & {
+    color: $white;
+  }
+}
+
+a {
+  -webkit-tap-highlight-color: transparent; // Gets rid of tap active state
+
+  // &:not([class*="button"]) {
+  //   color: $link-color;
+  //   font-family: $font-family-base;
+  //   line-height: $line-height-base;
+  //   text-decoration: $link-decoration;
+  //   transition: 0.3s;
+  //   cursor: pointer;
+
+  //   &:hover {
+  //     color: $link-hover-color;
+  //   }
+  // }
+
+  color: $link-color;
+  font-family: $font-family-base;
+  line-height: $line-height-base;
+  text-decoration: $link-decoration;
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    color: $link-hover-color;
+  }
+}
+
+blockquote {
+  font-size: 1.125rem;
+  color: $text-color;
+  padding: 10px 0 10px 25px;
+  border-left: 5px solid $primary;
+  margin: 15px 0 15px 0;
+  line-height: 1.42857;
+  max-width: 33em;
+
+  .blockquote-caption {
+    @extend .caption;
+    padding-top: 1rem;
+    text-align: right;
+    margin-bottom: 0;
+  }
+}
+
+.caption {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: normal;
+  color: currentColor;
+}
+
+.overline {
+  font-size: 0.875rem;
+  display: block;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  color: $accent;
+}
+
+.label {
+  background: $accent;
+  color: #ffffff;
+  display: inline-block;
+  font-family: "Lato", sans-serif;
+  font-size: 0.875rem;
+  font-weight: bold;
+  line-height: 0.875rem;
+  letter-spacing: 1px;
+  margin: 0 0 10px;
+  padding: 10px 15px 8px;
+  text-transform: uppercase;
+}
+
+.date-line {
+  color: #bbc3c8;
+  background: #292929;
+  display: inline-block;
+  font-family: "Georgia", serif;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0 0 20px 18px;
+  padding: 10px 12px 8px;
+  position: absolute;
+  bottom: -36px;
+}
+
+.subheading {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+
+  color: #eeeeee;
+}

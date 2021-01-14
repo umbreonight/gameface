@@ -1,0 +1,39 @@
+.header-carousel {
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+  grid-area: header-carousel;
+
+  @include sm() {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .billboard {
+    min-height: 300px;
+    padding: 3rem 2rem;
+    justify-content: start;
+    text-align: left;
+
+    @include md() {
+      padding: 3rem 5.75rem;
+    }
+
+    @include lg() {
+      padding: 1rem 13.75rem;
+      min-height: 360px;
+    }
+  }
+
+  .billboard-title {
+    font-family: $font-family-heading;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    text-transform: uppercase;
+
+    &::after {
+      content: none;
+    }
+  }
+}

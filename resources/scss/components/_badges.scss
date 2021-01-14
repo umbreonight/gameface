@@ -1,0 +1,27 @@
+
+.badge {
+    background-color: $badge-bg-default;
+    border-radius: $badge-border-radius;
+    color: $white !important;
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: $line-height-base;
+    padding: $badge-padding;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: baseline;
+    white-space: nowrap;
+    user-select: none;
+  
+    &[href] {
+      background-color: $badge-link-bg;
+      transition: .3s;
+      cursor: pointer;
+  
+      &:hover {
+        background-color: $badge-link-hover;
+      }
+    }
+  }
+  

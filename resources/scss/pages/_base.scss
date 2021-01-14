@@ -1,0 +1,38 @@
+.gameface365 {
+  @include grid-container();
+  @include grid-container-max-widths();
+  padding-top: 50px;
+
+  display: grid;
+  grid-template-areas: "header-carousel header-carousel" "main main";
+  grid-template-rows: 300px 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+
+  main {
+    display: grid;
+    grid-area: main;
+    grid-gap: 2rem;
+  }
+
+  aside {
+    display: none;
+  }
+
+  section[name="header-carousel"] {
+    grid-area: header-carousel;
+  }
+
+  @include lg() {
+    grid-template-areas: "header-carousel header-carousel" "main aside";
+    grid-template-rows: 360px 1fr;
+    grid-template-columns: 1fr 300px;
+
+    aside {
+      display: grid;
+      grid-area: aside;
+      grid-gap: 1rem;
+      grid-auto-rows: min-content;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+footer {
+  display: grid;
+  grid-column: span 2;
+  grid-template-areas: "brand brand" "social-media social-media" "copyright copyright";
+  grid-template-columns: 1fr;
+  grid-template-rows: 40px 40px 40px;
+  padding: 2rem 1rem;
+  gap: 1rem;
+  column-gap: 2rem;
+  background-color: #121212;
+
+  @include sm() {
+  grid-template-rows: 40px auto 40px;
+  grid-template-columns: 1fr 1fr;
+
+    grid-template-areas: "navigation navigation" "social-media brand" "copyright copyright";
+  }
+
+  .navigation {
+    grid-area: navigation;
+    justify-content: center;
+    align-items: center;
+
+    display: none;
+
+    @include sm() {
+    display: flex;
+    }
+  }
+
+  .social-media {
+    display: flex;
+    grid-area: social-media;
+    justify-content: center;
+    align-items: center;
+
+    @include sm() {
+      justify-content: flex-end;
+    }
+
+    .social-link:not(:last-child) {
+      margin-right: 21px;
+    }
+    .social-link img {
+      width: 26px;
+    }
+
+    .social-link.facebook {
+      color: white;
+    }
+    .social-link.twitter {
+      color: white;
+    }
+    .social-link.youtube {
+      color: white;
+    }
+    .social-link.instagram {
+      color: white;
+    }
+  }
+
+  .brand {
+    display: flex;
+    grid-area: brand;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      height: 40px;
+    }
+
+    @include sm() {
+    justify-content: flex-start;
+      display: flex;
+    }
+  }
+
+  .copyright {
+    display: flex;
+    grid-area: copyright;
+    justify-content: center;
+    align-items: center;
+  }
+
+}

@@ -1,0 +1,64 @@
+// Shared styles
+$button-border: none !default;
+$button-font-size: $font-size-base !default;
+$button-icon-font-size: 1.3rem !default;
+$button-height: 40px !default;
+$button-padding: 0 16px !default;
+$button-border-radius: 4px !default;
+
+// Disabled styles
+$button-disabled-background: #DFDFDF !default;
+$button-disabled-border: #DFDFDF !default;
+$button-disabled-color: #9F9F9F !default;
+
+// Accent Buttons
+
+$button-accent-background: $gray-900;
+$button-accent-color: $accent;
+$button-accent-background-hover: darken($button-accent-background, 5%) !default;
+$button-accent-color-hover: $white !default;
+
+
+// Raised buttons
+$button-raised-background: $primary !default;
+$button-raised-background-hover: darken($button-raised-background, 5%) !default;
+$button-raised-color: $white !default;
+
+// Flat buttons
+$button-flat-color: $primary !default;
+$button-flat-color-hover: darken($button-flat-color, 5%) !default;
+$button-flat-disabled-color: $button-disabled-color !default;
+
+// Large buttons
+$button-large-font-size: 15px !default;
+$button-large-icon-font-size: 1.6rem !default;
+$button-large-height: $button-height * 1.5 !default;
+$button-round-large-size: 56px !default;
+
+// Small buttons
+$button-small-font-size: 13px !default;
+$button-small-icon-font-size: 1.2rem !default;
+$button-small-height: $button-height * .9 !default;
+$button-round-small-size: $button-height * .9 !default;
+$button-small-padding: 0 10px;
+
+// Fixed button
+$button-fixed-background: $accent !default;
+$button-fixed-background-hover: darken($button-fixed-background, 5%) !default;
+$button-fixed-color: $white !default;
+$button-fixed-size: 56px;
+$button-fixed-font-size: 24px;
+$button-fixed-padding: 16px;
+$button-fixed-gap: 0.75rem;
+$button-fixed-radius: 100%;
+
+$button-fixed-mini-size: 40px;
+$button-fixed-mini-padding: 8px;
+
+// Round buttons
+$button-round-background: $accent !default;
+$button-round-background-hover: darken($button-round-background, 5%) !default;
+$button-round-color: #fff !default;
+$button-round-size: 40px !default;
+$button-round-large-size: $button-round-size * 1.5 !default;
+$button-round-radius: 50% !default;

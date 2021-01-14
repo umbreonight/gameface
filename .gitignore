@@ -1,0 +1,26 @@
+# Node modules
+node_modules
+
+# Adonis directory for storing tmp files
+tmp
+
+# Environment variables, never commit this file
+.env
+.env.example
+dump.rdb
+newrelic_agent.log
+./newrelic_agent.log
+
+# The development sqlite file
+database/development.sqlite
+
+./build
+build
+
+package-lock.json
+/public/dist/
+/public/uploads/
+
+# Snippets
+
+.vscode
